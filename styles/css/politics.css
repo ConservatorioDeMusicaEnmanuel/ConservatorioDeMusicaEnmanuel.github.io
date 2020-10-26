@@ -1,0 +1,8 @@
+section#politics{
+    border-radius:10px;
+    border: solid 5px #FFFF00;
+}
+
+.btn-danger{
+    background-color: #FF0000;
+}

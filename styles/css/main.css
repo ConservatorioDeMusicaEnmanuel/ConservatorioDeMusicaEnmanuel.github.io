@@ -1,0 +1,204 @@
+@font-face {
+    font-family: 'acumin';
+    src: url("../fonts/AcuminVariableConcept.otf") format("opentype");
+}
+
+:root{
+    --principal-color:#FFFF00;
+    --secondary-color:#FFFF60
+
+    ;
+    --header-font-size: 72px;
+    --large-breakpoint: 960px;
+}
+
+html{
+    scroll-behavior: smooth;
+    
+}
+
+*{
+    font-family: 'acumin';
+}
+
+
+body{
+    scroll-snap-type: y mandatory;
+}
+
+/*--------------Navegación-----------------*/
+
+nav{
+    background-color:var(--principal-color);
+}
+
+li.pointer{
+    cursor: pointer;
+}
+
+.navbar-toggler{
+    border-radius: 0;
+}
+
+nav#navBar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 3;
+    transition: opacity .5s ease;
+
+}
+
+nav#navBar:hover{
+    opacity: 1;
+}
+
+#wpButton{
+    position: fixed;
+    right: 8px;
+    bottom: 8px;
+    z-index: 2;
+    transition: all .5s ease;
+}
+
+.btn{
+    border-radius: 0;
+}
+
+.btn-danger{
+    background-color: #FF0000;
+}
+
+
+section#about h5{
+    font-variant: var(--bodoni-font-family);
+}
+
+h1.largeH{
+    font-size: var(--header-font-size);
+}
+
+div#cards{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.card{
+    border-radius: 0;
+}
+
+.card-img-top{
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+
+div.verticalSeparator{
+    /* box-shadow: 0px 0px 10px 1px black; */
+    width: 0;
+    height: 100%;
+    border-left: 1px ridge black;
+}
+
+div.horizontalSeparator{
+    border-radius: 1px;
+    box-shadow: 0px 0px 10px 1px black;
+    width: 80%;
+    height: 0;
+    border-bottom: 1px ridge black;
+    opacity: 0.5;
+}
+
+/* ------------------- About section -------------------- */
+
+section#about{
+    min-width: 100%;
+    min-height: 100vh;
+    background-color: var(--secondary-color);
+}
+
+/*Sección de clases.*/
+section#classes{
+    min-width: 100%;
+    min-height: 100vh; 
+    background-color: var(--secondary-color);
+}
+
+table{
+    background-color: var(--secondary-color);
+}
+
+@media only screen and (min-width: 960px){
+    div#courseCard{
+        width: 250px;
+    }
+}
+
+div#courseCard{
+    border: 1px solid #000000;
+    transition: color .20s;
+    transition: background-color .20s;
+    cursor: pointer;
+
+}
+
+
+div#courseCard:hover{    
+    box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 75);
+    background-color: var(--principal-color);
+}
+/*---------------------------Sección de maestros-------------------------------------*/
+
+section#teachers{
+    background-color: black;
+    min-width: 100%;
+    min-height: 100vh; 
+}
+
+section#teachers::before{
+    display: block;
+    height: 6rem;
+    margin-top: -6rem;
+    content: "";
+}
+
+@media only screen and (min-width: 960px){
+    div#teacherCard{
+        width: 300px;
+    }
+}
+
+div#teacherCard{
+    border: 1px solid var(--principal-color);
+    background-color: var(--secondary-color);
+}
+
+/*----------------------------------------------------------------*/
+
+
+section#gallery{
+    background-color: var(--principal-color);
+}
+
+section#gallery div div img{
+    border: 8px solid transparent;
+}
+
+section#gallery div div img:hover{
+    border: 0;
+}
+
+.vertical-solid {
+    border-left: 8px solid #bbb;
+    border-radius: 5px;
+  }
+
+footer{
+    background-color: #000000;
+    max-width: 100%;
+}
+
+ul{
+    padding: 0;
+}

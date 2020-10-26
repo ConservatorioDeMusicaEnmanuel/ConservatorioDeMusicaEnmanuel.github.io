@@ -1,0 +1,79 @@
+{
+    "name":"Trompeta",
+    "requirements": null, 
+    "levels":
+        [
+            {
+                "name":"Principiante",
+                "modules":
+                    [
+                        {
+                            "name":"I",
+                            "time":"Dos Meses",
+                            "classes":"Solfeo,\nInstrumento"
+                        },
+
+                        {
+                            "name":"II",
+                            "time":"Dos Meses",
+                            "classes":"Solfeo,\nInstrumento"
+                        },
+
+                        {
+                            "name":"III",
+                            "time":"Dos Meses",
+                            "classes":"Solfeo,\nInstrumento"
+                        }
+                    ]
+            },
+
+            {
+                "name":"Intermedio",
+                "modules":
+                    [
+                        {
+                            "name":"I",
+                            "time":"Dos Meses",
+                            "classes":"Solfeo,\nInstrumento"
+                        },
+
+                        {
+                            "name":"II",
+                            "time":"Dos Meses",
+                            "classes":"Solfeo,\nInstrumento"
+                        },
+
+                        {
+                            "name":"III",
+                            "time":"Dos Meses",
+                            "classes":"Solfeo,\nInstrumento"
+                        }
+                    ]
+            },
+
+            {
+                "name":"Avanzado",
+                "modules":
+                    [
+                        {
+                            "name":"I",
+                            "time":"Dos Meses",
+                            "classes":"Solfeo,\nInstrumento,\nArmonía"
+                        },
+
+                        {
+                            "name":"II",
+                            "time":"Dos Meses",
+                            "classes":"Solfeo,\nInstrumento,\nArmonía"
+                        },
+
+                        {
+                            "name":"III",
+                            "time":"Dos Meses",
+                            "classes":"Solfeo,\nInstrumento,\nArmonía"
+                        }
+                    ]
+            }
+   
+        ]  
+}

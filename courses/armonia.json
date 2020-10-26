@@ -1,0 +1,79 @@
+{
+    "name":"Armonía",
+    "requirements": null, 
+    "levels":
+        [
+            {
+                "name":"Principiante",
+                "modules":
+                    [
+                        {
+                            "name":"I",
+                            "time":"Dos Meses",
+                            "classes":"Armonía"
+                        },
+
+                        {
+                            "name":"II",
+                            "time":"Dos Meses",
+                            "classes":"Armonía"
+                        },
+
+                        {
+                            "name":"III",
+                            "time":"Dos Meses",
+                            "classes":"Armonía"
+                        }
+                    ]
+            },
+
+            {
+                "name":"Intermedio",
+                "modules":
+                    [
+                        {
+                            "name":"I",
+                            "time":"Dos Meses",
+                            "classes":"Armonía"
+                        },
+
+                        {
+                            "name":"II",
+                            "time":"Dos Meses",
+                            "classes":"Armonía"
+                        },
+
+                        {
+                            "name":"III",
+                            "time":"Dos Meses",
+                            "classes":"Armonía"
+                        }
+                    ]
+            },
+
+            {
+                "name":"Avanzado",
+                "modules":
+                    [
+                        {
+                            "name":"I",
+                            "time":"Dos Meses",
+                            "classes":"Armonía"
+                        },
+
+                        {
+                            "name":"II",
+                            "time":"Dos Meses",
+                            "classes":"Armonía"
+                        },
+
+                        {
+                            "name":"III",
+                            "time":"Dos Meses",
+                            "classes":"Armonía"
+                        }
+                    ]
+            }
+   
+        ]  
+}

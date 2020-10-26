@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <title>Conservatorio de Música Emmanuel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' href='styles/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="styles/css/main.css">
+  <link rel="shortcut icon" href="styles/images/Logo.svg">
+</head>
+
+<body onload="pushCarrousell();">
+
+  <!-- Whatsapp Button -->
+
+  <a href="https://wa.me/50499672930"><button type="button" id="wpButton" class="btn btn-danger">
+
+      <div class="row">
+        <div class="col-md-12">
+          <img src="styles/images/socialMedia/whatsapp.svg" id="wtpBtn" style="height: 40px; width: 40px; margin: 8px;">
+          <span style="margin: 8px;">Escríbenos</span>
+        </div>
+      </div>
+    </button></a>
+
+
+  <!--NAVBAR-->
+  
+  <nav class="navbar navbar-expand-md  navbar-light" id="navBar" onmouseover="changeOpacity('#navBar',1)">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" style="max-width: 60vw;">
+        <img src="styles/images/brand.svg" class="img-fluid" alt="Conservatorio De Música Emanuel" style="width: 100%;">
+      </a>
+      <button class="navbar-toggler" id="collapseButton" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+
+          <li class="nav-item ml-lg-5 ml-md-3 pointer">
+            <a class="nav-link" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" onclick="positionToView('#carousel')">Inicio </a>
+          </li>
+          <li class="nav-item ml-lg-5 ml-md-3">
+            <div class="verticalSeparator"></div>
+          </li>
+
+          <li class="nav-item ml-lg-5 ml-md-3 pointer">
+            <a class="nav-link" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" onclick="positionToView('#classes')">Clases</a>
+          </li>
+          </li>
+          <li class="nav-item ml-lg-5 ml-md-3">
+            <div class="verticalSeparator"></div>
+          </li>
+
+          <li class="nav-item ml-lg-5 ml-md-3 pointer">
+            <a class="nav-link" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" onclick="positionToView('#teachers')">Maestros</a>
+          </li>
+          <li class="nav-item ml-lg-5 ml-md-3">
+            <div class="verticalSeparator"></div>
+          </li>
+
+          <li class="nav-item ml-lg-5 ml-md-3 pointer">
+            <a class="nav-link" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" onclick="positionToView('#about')">Conócenos</a>
+          </li>
+          <li class="nav-item ml-lg-5 ml-md-3">
+            <div class="verticalSeparator"></div>
+          </li>
+
+          <li class="nav-item ml-lg-5 ml-md-3 pointer">
+            <a class="nav-link" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" onclick="positionToView('#footer')">Contacto</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="pusher"></div>
+
+  <!--CAROUSEL/ART/PROMOS-->
+
+  <section id="carousel">
+
+    <div id="carouselFOXTROTIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators" style="z-index: 2;">
+        <li data-target="#carouselFOXTROTIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselFOXTROTIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselFOXTROTIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="styles/images/Banners/Banner 1.jpg" class="d-block w-100" alt="Promoción No 1">
+        </div>
+        <div class="carousel-item">
+          <img src="styles/images/Banners/Banner 2.jpg" class="d-block w-100" alt="Promoción No 2">
+        </div>
+        <div class="carousel-item">
+          <img src="styles/images/Banners/Banner 3.jpg" class="d-block w-100" alt="Promoción No 3">
+        </div>
+      </div>
+
+      <a class="carousel-control-prev" href="#carouselFOXTROTIndicators" role="button" data-slide="prev">
+        <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+        <img src="styles/images/leftArrow.svg" style="height:25%">
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselFOXTROTIndicators" role="button" data-slide="next">
+        <img src="styles/images/rightArrow.svg" style="height:25%">
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </section>
+
+
+  <!--Clases.-->
+
+  <section id="classes" class="container p-5">
+    <h1 class="largeH text-center pb-5 d-none d-md-block">Nuestras Clases</h1>
+    <h1 class="d-md-none text-center pb-5">Nuestras Clases</h1>
+
+    <!--Modal de Clases.-->
+
+    <div id="coursesModal" class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false"
+      tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-center modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Cartas de Clases.-->
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-3">
+
+      <!--Piano-->
+      <div class="col mb-3">
+        <div id="courseCard" class="card h-100 mx-auto" onclick="(new CoursesManager()).showModal('piano');">
+          <div class="row no-gutters">
+            <img src="styles/images/classes/piano-1531788_640.jpg" class="card-img-top" alt="Piano">
+            <div class="card-body">
+              <h5 class="card-title">Piano</h5>
+              <p class="card-text">
+                <b>Modalidad:</b> Virtual (Mediante plataforma Zoom).<br>
+                <b>Niveles:</b> Principiante, Intermedio, Avanzado.<br>
+                <b>Requisitos:</b> Ninguno.
+              </p>
+              <button class="btn btn-danger aling-self-center">Mas detalles</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Saxofón-->
+      <div class="col mb-3">
+        <div id="courseCard" class="card h-100 mx-auto" onclick="(new CoursesManager()).showModal('saxophone');">
+          <div class="row no-gutters">
+            <img src="styles/images/classes/saxophone-3246650_640.jpg" class="card-img-top" alt="Saxofón">
+            <div class="card-body">
+              <h5 class="card-title">Saxofón</h5>
+              <p class="card-text">
+                <b>Modalidad:</b> Virtual (Mediante plataforma Zoom).<br>
+                <b>Niveles:</b> Principiante, Intermedio, Avanzado.<br>
+                <b>Requisitos:</b> Ninguno.
+              </p>
+              <button class="btn btn-danger aling-self-center">Mas detalles</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Guitarra Clásica-->
+      <div class="col mb-3">
+        <div id="courseCard" class="card h-100 mx-auto" onclick="(new CoursesManager()).showModal('guitar');">
+          <div class="row no-gutters">
+            <img src="styles/images/classes/rsz_1guitar-1583851_640.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Guitarra Clásica</h5>
+              <p class="card-text">
+                <b>Modalidad:</b> Virtual (Mediante plataforma Zoom).<br>
+                <b>Niveles:</b> Principiante, Intermedio, Avanzado.<br>
+                <b>Requisitos:</b> Ninguno.
+              </p>
+              <button class="btn btn-danger aling-self-center">Mas detalles</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Guitarra Jazz-->
+      <div class="col mb-3">
+        <div id="courseCard" class="card h-100 mx-auto" onclick="(new CoursesManager()).showModal('guitarJazz');">
+          <div class="row no-gutters">
+            <img src="styles/images/classes/guitarJazz-2089810_640.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Guitarra Jazz</h5>
+              <p class="card-text">
+                <b>Modalidad:</b> Virtual (Mediante plataforma Zoom).<br>
+                <b>Niveles:</b> Principiante, Intermedio, Avanzado.<br>
+                <b>Requisitos:</b> Ninguno.
+              </p>
+              <button class="btn btn-danger aling-self-center">Mas detalles</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Trompeta-->
+      <div class="col mb-3">
+        <div id="courseCard" class="card h-100 mx-auto" onclick="(new CoursesManager()).showModal('trompet');">
+          <div class="row no-gutters">
+            <img src="styles/images/classes/trompet-4208612_640.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Trompeta</h5>
+              <p class="card-text">
+                <b>Modalidad:</b> Virtual (Mediante plataforma Zoom).<br>
+                <b>Niveles:</b> Principiante, Intermedio, Avanzado.<br>
+                <b>Requisitos:</b> Ninguno.
+              </p>
+              <button class="btn btn-danger aling-self-center">Mas detalles</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Violín-->
+      <div class="col mb-3">
+        <div id="courseCard" class="card h-100 mx-auto" onclick="(new CoursesManager()).showModal('violin');">
+          <div class="row no-gutters">
+            <img src="styles/images/classes/violin-1136986_640.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Violín</h5>
+              <p class="card-text">
+                <b>Modalidad:</b> Virtual (Mediante plataforma Zoom).<br>
+                <b>Niveles:</b> Principiante, Intermedio, Avanzado.<br>
+                <b>Requisitos:</b> Ninguno.
+              </p>
+              <button class="btn btn-danger aling-self-center">Mas detalles</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Canto-->
+      <div class="col mb-3">
+        <div id="courseCard" class="card h-100 mx-auto" onclick="(new CoursesManager()).showModal('singing');">
+          <div class="row no-gutters">
+            <img src="styles/images/classes/canto-3926344_640.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Canto</h5>
+              <p class="card-text">
+                <b>Modalidad:</b> Virtual (Mediante plataforma Zoom).<br>
+                <b>Niveles:</b> Principiante, Intermedio, Avanzado.<br>
+                <b>Requisitos:</b> Ninguno.
+              </p>
+              <button class="btn btn-danger aling-self-center">Mas detalles</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Bajo Eléctrico-->
+      <div class="col mb-3">
+        <div id="courseCard" class="card h-100 mx-auto" onclick="(new CoursesManager()).showModal('bass');">
+          <div class="row no-gutters">
+            <img src="styles/images/classes/bass-guitar-1841186_640.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Bajo Eléctrico</h5>
+              <p class="card-text">
+                <b>Modalidad:</b> Virtual (Mediante plataforma Zoom).<br>
+                <b>Niveles:</b> Principiante, Intermedio, Avanzado.<br>
+                <b>Requisitos:</b> Ninguno.
+              </p>
+              <button class="btn btn-danger aling-self-center">Mas detalles</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Piano Jazz-->
+      <div class="col mb-3">
+        <div id="courseCard" class="card h-100 mx-auto" onclick="(new CoursesManager()).showModal('pianoJazz');">
+          <div class="row no-gutters">
+            <img src="styles/images/classes/pianoJazz-3703616_640.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Piano Jazz</h5>
+              <p class="card-text">
+                <b>Modalidad:</b> Virtual (Mediante plataforma Zoom).<br>
+                <b>Niveles:</b> Principiante, Intermedio, Avanzado.<br>
+                <b>Requisitos:</b> Conocimiento Básico.
+              </p>
+              <button class="btn btn-danger aling-self-center">Mas detalles</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Batería-->
+      <div class="col mb-3">
+        <div id="courseCard" class="card h-100 mx-auto" onclick="(new CoursesManager()).showModal('battery');">
+          <div class="row no-gutters">
+            <img src="styles/images/classes/drum-set-1839383_640.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Batería</h5>
+              <p class="card-text">
+                <b>Modalidad:</b> Virtual (Mediante plataforma Zoom).<br>
+                <b>Niveles:</b> Principiante, Intermedio, Avanzado.<br>
+                <b>Requisitos:</b> Ninguno.
+              </p>
+              <button class="btn btn-danger aling-self-center">Mas detalles</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Solfeo-->
+      <div class="col mb-3">
+        <div id="courseCard" class="card h-100 mx-auto" onclick="(new CoursesManager()).showModal('solfeo');">
+          <div class="row no-gutters">
+            <img src="styles/images/classes/solfeo-2881047_640.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Solfeo</h5>
+              <p class="card-text">
+                <b>Modalidad:</b> Virtual (Mediante plataforma Zoom).<br>
+                <b>Niveles:</b> Principiante, Intermedio, Avanzado.<br>
+                <b>Requisitos:</b> Ninguno.
+              </p>
+              <button class="btn btn-danger aling-self-center">Mas detalles</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Armonía-->
+      <div class="col mb-3">
+        <div id="courseCard" class="card h-100 mx-auto" onclick="(new CoursesManager()).showModal('armonia');">
+          <div class="row no-gutters">
+            <img src="styles/images/classes/armonia-1655558_640.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Armonía</h5>
+              <p class="card-text">
+                <b>Modalidad:</b> Virtual (Mediante plataforma Zoom).<br>
+                <b>Niveles:</b> Principiante, Intermedio, Avanzado.<br>
+                <b>Requisitos:</b> Ninguno.
+              </p>
+              <button class="btn btn-danger aling-self-center">Mas detalles</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!--MAESTROS-->
+
+  <section id="teachers" class="container p-5">
+
+    <h1 class="largeH text-center d-none d-md-block text-white">Nuestros Maestros</h1>
+    <h1 class="text-center d-md-none text-white">Nuestros Maestros</h1>
+
+
+    <!-- Modal de maestros -->
+    <div class="modal fade" id="teachersModal" tabindex="-1" role="dialog" aria-labelledby="teacherModalTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-center modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h5 class="modal-title text-center " id="teacherModalTitle"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-justify">
+            <div class="container">
+              <div class="row">
+                <div class="col" id="teacherModalPhoto">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col" id="teacherModalBio"></div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-3">
+
+      <div class="col mb-3 mx-auto">
+        <div id="teacherCard" class="card h-100 mx-auto">
+          <img src="styles/images/teachers/OrlynAndino.png" id="pilotPhoto" class="card-img-top w-100" alt="...">
+          <div class="card-body">
+            <h5 class="card-title" id="name">Orlyn Andíno</h5>
+            <p class="card-text">
+            <p>Licenciado en música con orientación en Guitarra Jazz por la Universidad Nacional Autónoma de Honduras.
+            </p>
+            <p><strong>
+                Maestro de: <a>Guitarra Jazz y Solfeo</a>
+              </strong></p>
+            </p>
+            
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-danger" data-toggle="modal" onclick="showTeacherModal('OrlynAndino');">Leer más
+              sobre el maestro</button>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-3 mx-auto">
+        <div id="teacherCard" class="card h-100 mx-auto">
+          <img src="styles/images/teachers/EmmanuelPortillo.png" class="card-img-top w-100 teacherPhoto"
+            alt="Foto del Maestro">
+          <div class="card-body">
+            <h5 class="card-title">Emmanuel Portillo</h5>
+            <p class="card-text">
+              Amante de la música en casi todas sus formas, músico multiinstrumentista. Comenzó a estudiar piano popular
+              el año 2002...
+            </p>
+            <p><strong>
+                Maestro de: <a>Piano Jazz</a>
+              </strong></p>
+            </p>
+            
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-danger" data-toggle="modal" onclick="showTeacherModal('EmmanuelPortillo');">Leer
+              más
+              sobre el maestro</button>
+
+          </div>
+        </div>
+      </div>
+      <div class="col mb-3 mx-auto">
+        <div id="teacherCard" class="card h-100 mx-auto">
+          <img src="styles/images/teachers/CarlosHernanReyes.png" class="card-img-top  w-100 teacherPhoto"
+            alt="Foto del Maestro">
+          <div class="card-body">
+            <h5 class="card-title">Carlos Hernan Reyes</h5>
+            <p class="card-text">
+              Carlos Hernán Reyes Ruiz, tuvo sus primeros contactos con la música en las
+              Iglesias de las Asamblea de Dios, sitio donde fue instruido...
+            </p>
+            <p><strong>
+                Maestro de: <a>Piano Clásico y Armonia</a>
+              </strong></p>
+            </p>
+            
+          </div>
+          <div class="card-footer">
+
+            <button class="btn btn-danger" data-toggle="modal" onclick="showTeacherModal('CarlosHernanReyes');">Leer más
+              sobre el maestro</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col mb-3 mx-auto">
+        <div id="teacherCard" class="card h-100 mx-auto">
+          <img src="styles/images/teachers/FavioLeonardoAlmendares.png" class="card-img-top teacherPhoto w-100"
+            alt="Foto del Maestro">
+          <div class="card-body">
+            <h5 class="card-title">Favio Leonardo Almendares</h5>
+            <p class="card-text">
+              Favio, a la edad de 3 años inició sus primeros pasos en el ámbito musical interpretando
+              canciones religiosas en la congregación...
+            </p>
+            <p><strong>
+                Maestro de: <a>Canto</a>
+              </strong></p>
+            
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-danger" data-toggle="modal"
+            onclick="showTeacherModal('FavioLeonardoAlmendares');">Leer más
+            sobre el maestro</button>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="col mb-3 mx-auto">
+        <div id="teacherCard" class="card h-100 mx-auto">
+          <img src="styles/images/teachers/FredisEduardoMayorga.png" class="card-img-top teacherPhoto w-100"
+            alt="Foto del Maestro">
+          <div class="card-body">
+            <h5 class="card-title">Fredis Eduardo Mayorga</h5>
+            <p class="card-text">
+              Soy Baterista con más de 7 años de experiencia en el
+              medio, impartiendo clases a domicilio desde el año 2017 hasta la actualidad...
+            </p>
+            <p><strong>
+                Maestro de: <a>Percución(Bateria)</a>
+              </strong></p>
+            
+          </div>
+          <div class="card-footer">
+
+            <button class="btn btn-danger" data-toggle="modal" onclick="showTeacherModal('FredisEduardoMayorga');">Leer
+              más
+              sobre el maestro</button>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-3 mx-auto">
+        <div id="teacherCard" class="card h-100 mx-auto">
+          <img src="styles/images/teachers/WillkynsRivera.png" class="card-img-top teacherPhoto w-100"
+            alt="Foto del Maestro">
+          <div class="card-body">
+            <h5 class="card-title">Willkyns Rivera</h5>
+            <p class="card-text">
+              Grado Medio en el Propedéutico de Música de la UNAH, recibiendo clases
+              de Guitarra
+              Clásica, Armonía, Solfeo e Historia de la Música.
+            </p>
+            <p><strong>
+                Maestro de: <a>Guitarra Clásica y Armonia</a>
+              </strong></p>
+            
+          </div>
+          <div class="card-footer">
+
+            <button class="btn btn-danger" data-toggle="modal" onclick="showTeacherModal('WillkynsRivera');">Leer
+              más
+              sobre el maestro</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col mb-3 mx-auto">
+        <div id="teacherCard" class="card h-100 mx-auto">
+          <img src="styles/images/teachers/JairoAguilar.png" class="card-img-top teacherPhoto w-100"
+            alt="Foto del Maestro">
+          <div class="card-body">
+            <h5 class="card-title">Jairo Aguilar</h5>
+            <p class="card-text">
+              Soy Músico Saxofonista Hondureño, en busca de lograr cumplir mis
+              sueños, !dar a conocer la música, la cultura y el arte que tiene...
+            </p>
+            <p><strong>
+                Maestro de: <a>Saxofón y Solfeo</a>
+              </strong></p>
+            
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-danger" data-toggle="modal" onclick="showTeacherModal('JairoAguilar');">Leer
+              más
+              sobre el maestro</button>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col mb-3 mx-auto">
+        <div id="teacherCard" class="card h-100 mx-auto">
+          <img src="styles/images/teachers/JuniorCortes.png" class="card-img-top teacherPhoto w-100 "
+            alt="Foto del Maestro">
+          <div class="card-body">
+            <h5 class="card-title">Junior Cortés</h5>
+            <p class="card-text">
+              Músico multi instrumentista, director del ensamble instrumental Aire Acústico, una
+              agrupación de jóvenes músicos amantes del arte en todas sus...
+            </p>
+            <p><strong>
+                Maestro de: <a>Bajo Eléctrico</a>
+              </strong></p>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-danger" data-toggle="modal" onclick="showTeacherModal('JuniorCortes');">Leer
+              más
+              sobre el maestro</button>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-3 mx-auto">
+        <div id="teacherCard" class="card h-100 mx-auto">
+          <img src="styles/images/teachers/MariaFernandaLopez.png" class="card-img-top teacherPhoto w-100"
+            alt="Foto del Maestro">
+          <div class="card-body">
+            <h5 class="card-title">Maria Fernanda Lopez</h5>
+            <p class="card-text">Maestra de violín, pertenece a la iglesia de Dios de la profecía en la Col. Modesto
+              Rodas
+              Alvarado, siendo ahí integrante del ministerio de alabanza...
+            </p>
+            <p><strong>
+                Maestra de: <a> Violin </a>
+              </strong></p>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-danger" data-toggle="modal" onclick="showTeacherModal('MariaFernandaLopez');">Leer
+              más
+              sobre el maestro</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!--CONÓCENOS-->
+
+  <section id='about' class="text-center container-fluid">
+
+    <div class="row pt-5 pb-5">
+      <h1 class="largeH col-md-12 d-none d-md-block">Conócenos</h1>
+      <h1 class="col-md-12 d-md-none">Conócenos</h1>
+    </div>
+
+    <div id="mision" class="container pb-5">
+      <div class="row">
+        <div class="col-md-5 align-self-center">
+          <div class="display-4 mx-auto align-self-center">Misión</div>
+        </div>
+        <div class="col-md-1">
+          <div class="verticalSeparator" style="opacity: 0.6;"></div>
+        </div>
+        <div class="col-md-6">
+          <div class="text-justify">¨El CONSERVATORIO DE MUSICA EMMANUEL¨ Tiene como misión ser los primeros en formar
+            profesionales
+            íntegros en el campo de la música , capaces de demostrar y desarrollar todo su potencial; alcanzando así
+            ser personas competitivas en el área, mediante la aplicación de un modelo educativo muy innovador ,así
+            como el total compromiso de sus funcionarios de promover valores éticos, sociales y culturales; permitiendo
+            que
+            sus egresados sean personas comprometidas con la construcción de una sociedad más humana, justa
+            y solidaria. </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="horizontalSeparator mx-auto"></div> -->
+
+    <div id="vision" class="container pt-5 pb-5">
+      <div class="row">
+        <div class="col-md-5 align-self-center">
+          <div class="display-4 mx-auto align-self-center">Visión</div>
+        </div>
+        <div class="col-md-1">
+          <div class="verticalSeparator" style="opacity: 0.6;"></div>
+        </div>
+        <div class="col-md-6">
+          <div class="text-justify">Ser líderes en la formación de músicos profesionales tanto a
+            nivel nacional como internacional, basado en el mejoramiento continuo de la
+            calidad en nuestro servicio</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="values" class="container pt-5 pb-5">
+      <div class="row">
+        <div class="col-md-5 align-self-center">
+          <div class="display-4 mx-auto align-self-center">Valores</div>
+        </div>
+        <div class="col-md-1">
+          <div class="verticalSeparator" style="opacity: 0.6;"></div>
+        </div>
+        <div class="col-md-6">
+          <div class="text-justify">
+            <ul>
+              <li>
+                Servicio
+              </li>
+              <li>
+                Profesionalismo
+              </li>
+              <li>
+                Compromiso
+              </li>
+              <li>
+                Responsabilidad
+              </li>
+              <li>
+                Honestidad
+              </li>
+              <li>
+                Confianza
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="init" class="container pt-5 pb-5">
+      <div class="row">
+        <div class="col-md-5 align-self-center">
+          <div class="display-4 mx-auto align-self-center">Nuestros comienzos</div>
+        </div>
+        <div class="col-md-1">
+          <div class="verticalSeparator" style="opacity: 0.6;"></div>
+        </div>
+        <div class="col-md-6">
+          <div class="text-justify">Desde el comienzo de nuestras actividades,
+            nos especializamos en desarrollo de cursos musicales. Con el transcurso del tiempo hemos incorporado
+            innovaciones estratégicas con el objetivo de proveer a nuestros clientes una
+            solución integral a sus necesidades. Contamos con un excelente grupo humano
+            el cual se capacita en forma permanente a fin de estar
+            actualizado en los cambios e innovaciones tecnológicas,
+            académicas que se presentan en nuestro ámbito.
+            Nuestro objetivo principal es lograr una
+            permanente mejora en nuestras actividades a fin de
+            dar un buen servicio que asegure una satisfacción
+            plena de nuestros clientes</div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+  </section>
+
+
+  <!--GALLERY-->
+
+  <section id="gallery" class="text-white d-none">
+    <h1 class="text-center mb-5">Galería</h1>
+
+    <div class="container pb-5">
+      <div class="row pb-3">
+        <div class="col-md-12">
+          <img src="https://picsum.photos/1200/400" class="img-fluid rounded">
+        </div>
+      </div>
+
+      <div class="row pb-3">
+        <div class="col-md-4">
+          <img src="https://picsum.photos/600/400" class="img-fluid">
+        </div>
+
+        <div class="col-md-4">
+          <img src="https://picsum.photos/600/400" class="img-fluid">
+        </div>
+
+        <div class="col-md-4">
+          <img src="https://picsum.photos/600/400" class="img-fluid">
+        </div>
+      </div>
+
+      <div class="row pb-3">
+        <div class="col-md-8 offset-md-2">
+          <iframe width="100%" height="400px" src="https://www.youtube.com/embed/wwyznoWJDHI" frameborder="0"></iframe>
+        </div>
+      </div>
+
+  </section>
+
+
+  <!-- Contacto -->
+
+  <footer id="footer" class="container-fluid aling-items-center justify-content-around p-5 text-white">
+
+    <div class="row text-center">
+      <div class="col-md-12">
+        <h1 class="largeH d-none d-md-block">Contacto</h1>
+        <h1 class="d-md-none">Contacto</h1>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-6 p-5">
+        <img src="styles/images/logoNameYellow.svg" class="img-fluid d-block mx-auto" style="height: 80%;">
+      </div>
+
+      <div class="col-md-6 p-5" id="contactInfo">
+
+        <button class="btn btn-danger btn-lg btn-block mt-5" onclick="showContactInfo();">Ver información de
+          contacto</button>
+      </div>
+
+    </div>
+
+    <div class="row text-center">
+      <div class="col-md-12">
+        <a href="politicas.html" class="mx-auto">Politicas del Conservatorio Emmanuel</a>
+      </div>
+    </div>
+
+    <div class="row text-center">
+      <div class="col-md-12">
+        <span>Algunas imgenes obtenidas de www.freepik.com</span>
+      </div>
+    </div>
+
+
+  </footer>
+  <!--SCRIPTS-->
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

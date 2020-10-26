@@ -1,0 +1,79 @@
+{
+    "name":"Solfeo",
+    "requirements": null, 
+    "levels":
+        [
+            {
+                "name":"Principiante",
+                "modules":
+                    [
+                        {
+                            "name":"I",
+                            "time":"Dos Meses",
+                            "classes":"Solfeo"
+                        },
+
+                        {
+                            "name":"II",
+                            "time":"Dos Meses",
+                            "classes":"Solfeo"
+                        },
+
+                        {
+                            "name":"III",
+                            "time":"Dos Meses",
+                            "classes":"Solfeo"
+                        }
+                    ]
+            },
+
+            {
+                "name":"Intermedio",
+                "modules":
+                    [
+                        {
+                            "name":"I",
+                            "time":"Dos Meses",
+                            "classes":"Solfeo"
+                        },
+
+                        {
+                            "name":"II",
+                            "time":"Dos Meses",
+                            "classes":"Solfeo"
+                        },
+
+                        {
+                            "name":"III",
+                            "time":"Dos Meses",
+                            "classes":"Solfeo"
+                        }
+                    ]
+            },
+
+            {
+                "name":"Avanzado",
+                "modules":
+                    [
+                        {
+                            "name":"I",
+                            "time":"Dos Meses",
+                            "classes":"Solfeo"
+                        },
+
+                        {
+                            "name":"II",
+                            "time":"Dos Meses",
+                            "classes":"Solfeo"
+                        },
+
+                        {
+                            "name":"III",
+                            "time":"Dos Meses",
+                            "classes":"Solfeo"
+                        }
+                    ]
+            }
+   
+        ]  
+}
